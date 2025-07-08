@@ -1,9 +1,9 @@
 // Wallet.js
 const express = require('express');
 const jwt = require('jsonwebtoken');
-const Transaction = require('./models/Transaction');
-const User = require('./models/User');
-const Match = require('./models/Match');
+const Transaction = require('./Transaction');
+const User = require('./User');
+const Match = require('./Match');
 const router = express.Router();
 
 // Auth middleware
