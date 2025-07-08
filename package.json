@@ -1,1 +1,7 @@
-{ "name": "guti-backend", "main": "server.js" }
+{
+  "name": "guti-backend",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  }
+}
