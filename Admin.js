@@ -1,9 +1,9 @@
 // Admin.js
 const express = require('express');
-const Transaction = require('./models/Transaction');
-const Match = require('./models/Match');
+const Transaction = require('./Transaction');
+const Match = require('./Match');
 const jwt = require('jsonwebtoken');
-const User = require('./models/User');
+const User = require('./User');
 const router = express.Router();
 
 // Simple admin auth by mobile/password
