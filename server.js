@@ -1,15 +1,24 @@
 // server.js
 const express = require('express');
-const connectDB = require('./db'); // Uses db.js
+const connectDB = require('./db');
+const authRoutes = require('./Auth');
+const walletRoutes = require('./Wallet');
+const adminRoutes = require('./Admin');
+const matchRoutes = require('./Match');
+
 const app = express();
+app.use(express.json());
 
 // Connect to MongoDB
 connectDB();
 
-// Middleware to parse JSON
-app.use(express.json());
+// Mount routes
+app.use('/api/auth', authRoutes);
+app.use('/api/wallet', walletRoutes);
+app.use('/api/admin', adminRoutes);
+app.use('/api/matches', matchRoutes);
 
-// Test route
+// Health‑check
 app.get('/', (req, res) => {
   res.send('🎮 3 Guti backend is live!');
 });
